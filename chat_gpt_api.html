@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="chat_gpt_api.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <title>Chat GPT</title>
+
+</head>
+<body>
+
+<div class="container">
+  
+  <div class="role_container">
+    <label for="role" id="role_title">Wybierz rolę:</label>
+    <select id="role" onchange="handleRoleChange()">
+      <option value="Psycholog">Psycholog</option>
+      <option value="Trener personalny">Trener personalny</option>
+      <option value="Dietetyk żywieniowy">Dietetyk żywieniowy</option>
+      <option value="Bobas/ bardzo młody dzieciak">Kid</option>
+      <option value="Kobieta w ciąży">Baba w ciąży</option>
+      <option value="Mikrofalówka">Mikrofalówka</option>
+      <option value="Zawansowany Matematyk">Zawansowany Matematyk</option>
+      <option value="Zakochana osoba">Zakochana osoba</option>
+      <option value="Wkurzona Sprzątaczka">Wkurzona Sprzątaczka</option>
+      <option value="Youtuber">Youtuber</option>
+      <option value="Podaj Własną">Podaj Własną</option>
+    </select>
+
+    <div class="input_role" style="display: none;">
+      <input type="text" id="own_role">
+    </div>
+    <button id="confirm">Potwierdź</button>
+</div>
+
+
+
+  <div id="chat-window"></div>
+  <input type="text" id="input-message" placeholder="Zadaj mi pytanie...">
+  <button id="send-button">Wyślij</button>
+</div>
+
+
+
+
+
+<script>
+$(document).ready(function() {
+  $('#role').select2({
+    width: '250px',
+  });
+});
+
+</script>
+
+
+
+
+
+<script src="chat_gpt_api.js"></script>
+
+</body>
+</html>
