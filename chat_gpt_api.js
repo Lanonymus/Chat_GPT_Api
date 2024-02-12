@@ -5,7 +5,7 @@ const roleSelect = document.getElementById('role');
 const ownRoleInput = document.getElementById('own_role');
 const confirmButton = document.getElementById('confirm');
 
-const API_KEY = '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';
+const API_KEY = 'ENTER YOUR KEY FROM CHAT GPT API , Here is Link ---> https://platform.openai.com/api-keys';
 
 async function getResponse(userInput, selectedRole) {
   try {
